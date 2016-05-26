@@ -11,7 +11,7 @@ import {Wove} from 'aspect.js-angular';
 
 class SampleAspect {
   @beforeMethod({
-    classNamePattern: /^Bar&/,
+    classNamePattern: /^Bar$/,
     methodNamePattern: /baz$/
   })
   logger(meta: Metadata) {
