@@ -1,0 +1,44 @@
+{
+  "name": "aspect.js-angular",
+  "version": "0.0.1",
+  "description": "Angular-specific aspect.js tools which provide access to the injector.",
+  "main": "./dist/lib/index.js",
+  "typings": "./dist/lib/index.d.ts",
+  "scripts": {
+    "postinstall": "typings install",
+    "tsc": "tsc --declaration",
+    "prepublish": "npm run tsc",
+    "test": "tsc && mocha ./dist/test/**/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mgechev/aspect.js-angular.git"
+  },
+  "peerDependencies": {
+    "aspect.js": "~0.2.4",
+    "@angular/core": ">=2.0.0-rc.1"
+  },
+  "dependencies": {
+    "reflect-metadata": "0.1.2",
+    "typings": "^1.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.3.0",
+    "typescript": "^1.8.10",
+    "typings": "^0.6.9"
+  },
+  "keywords": [
+    "angular",
+    "angular2",
+    "aspect.js",
+    "aop",
+    "aspect",
+    "pointcut"
+  ],
+  "author": "Minko Gechev",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mgechev/aspect.js-angular/issues"
+  },
+  "homepage": "https://github.com/mgechev/aspect.js-angular#readme"
+}
