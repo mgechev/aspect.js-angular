@@ -8,7 +8,6 @@
     "postinstall": "typings install",
     "tsc": "tsc --declaration",
     "build_publish": "rm -rf dist && npm run tsc && cp ./package.json dist/lib",
-    "prepublish": "npm run tsc",
     "test": "tsc && mocha ./dist/test/**/*.spec.js"
   },
   "repository": {
