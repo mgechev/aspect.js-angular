@@ -7,7 +7,7 @@
   "scripts": {
     "postinstall": "typings install",
     "tsc": "tsc --declaration",
-    "build_publish": "rm -rf dist && npm run tsc && cp ./package.json dist/lib",
+    "build_publish": "rm -rf dist && npm run tsc && cp ./package.json README.md dist/lib",
     "test": "tsc && mocha ./dist/test/**/*.spec.js"
   },
   "repository": {
