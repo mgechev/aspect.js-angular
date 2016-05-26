@@ -1,16 +1,23 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
-    "sourceMap": true,
+    "declaration": true,
+    "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "outDir": "./dist"
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "noEmitOnError": true,
+    "noImplicitAny": true,
+    "outDir": "./dist/",
+    "rootDir": "./",
+    "sourceMap": true,
+    "target": "es5",
+    "inlineSources": true
   },
-  "exclude": [
-    "typings/browser.d.ts",
-    "typings/browser",
-    "dist",
-    "node_modules",
-    ".vscode"
+
+  "files": [
+    "lib/index.ts",
+    "./typings/globals/es6-shim/index.d.ts",
+    "./node_modules/reflect-metadata/reflect-metadata.d.ts"
   ]
 }

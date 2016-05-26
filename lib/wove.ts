@@ -1,14 +1,14 @@
-import {ReflectiveInjector} from '@angular/core';
+import {Injector} from '@angular/core';
 
 import {_AspectRegistry} from 'aspect.js';
 
 export interface WoveMetadata {
-  injector: ReflectiveInjector;
+  injector: Injector;
   config: any;
 }
 
-export const Wove = (config: any) => {
-  return (target: Function) => {
+export const Wove = (config?: any) => {
+  return (target: any) => {
     const result = function () {
       target.apply(this, arguments);
       const keys = Object.getOwnPropertyNames(_AspectRegistry);
@@ -25,10 +25,10 @@ export const Wove = (config: any) => {
         Reflect.defineMetadata(key, Reflect.getMetadata(key, target), result);
       });
     const params = Reflect.getMetadata('design:paramtypes', target) || [];
-    params.push(ReflectiveInjector);
+    params.push(Injector);
     Reflect.defineMetadata('design:paramtypes', params, result);
     result.prototype = target.prototype;
-    return result;
+    return <any>result;
   };
 };
 

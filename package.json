@@ -2,11 +2,12 @@
   "name": "aspect.js-angular",
   "version": "0.0.1",
   "description": "Angular-specific aspect.js tools which provide access to the injector.",
-  "main": "./dist/lib/index.js",
-  "typings": "./dist/lib/index.d.ts",
+  "main": "./index.js",
+  "typings": "./index.d.ts",
   "scripts": {
     "postinstall": "typings install",
     "tsc": "tsc --declaration",
+    "build_publish": "rm -rf dist && npm run tsc && cp ./package.json dist/lib",
     "prepublish": "npm run tsc",
     "test": "tsc && mocha ./dist/test/**/*.spec.js"
   },
@@ -19,13 +20,12 @@
     "@angular/core": ">=2.0.0-rc.1"
   },
   "dependencies": {
-    "reflect-metadata": "0.1.2",
-    "typings": "^1.0.1"
+    "reflect-metadata": "0.1.2"
   },
   "devDependencies": {
     "chai": "^3.3.0",
-    "typescript": "^1.8.10",
-    "typings": "^0.6.9"
+    "typescript": "^1.9.0-dev.20160409",
+    "typings": "^1.0.1"
   },
   "keywords": [
     "angular",
