@@ -1,13 +1,14 @@
 {
   "name": "aspect.js-angular",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Angular-specific aspect.js tools which provide access to the injector.",
   "main": "./index.js",
+  "jsnext:main": "./esm/index.js",
   "typings": "./index.d.ts",
   "scripts": {
     "postinstall": "typings install",
-    "tsc": "tsc --declaration",
-    "build_publish": "rm -rf dist && npm run tsc && cp ./package.json README.md dist/lib",
+    "tsc": "tsc --declaration && tsc --project tsconfig-es2015.json",
+    "build_publish": "rm -rf dist && npm run tsc && cp ./package.json README.md dist",
     "test": "tsc && mocha ./dist/test/**/*.spec.js"
   },
   "repository": {

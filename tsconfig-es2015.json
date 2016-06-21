@@ -4,20 +4,19 @@
     "declaration": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "module": "commonjs",
+    "module": "es2015",
     "moduleResolution": "node",
     "noEmitOnError": true,
     "noImplicitAny": true,
-    "outDir": "./dist/",
+    "outDir": "./dist/esm",
     "rootDir": "./lib",
     "sourceMap": true,
-    "target": "es5",
+    "target": "es2015",
     "inlineSources": true
   },
 
   "files": [
     "lib/index.ts",
-    "./typings/globals/es6-shim/index.d.ts",
     "./node_modules/reflect-metadata/reflect-metadata.d.ts"
   ]
 }
