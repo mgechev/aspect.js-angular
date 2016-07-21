@@ -16,9 +16,14 @@ export const Wove = (config?: any) => {
         injector: arguments[arguments.length - 1],
         config
       };
+      // Makes sure the target is being woven once
+      if (target.__woven__) {
+        return;
+      }
       keys.forEach(key => {
         _AspectRegistry[key].wove(target, woveMetadata);
       });
+      target.__woven__ = true;
     };
     Reflect.getMetadataKeys(target)
       .forEach((key: string) => {
