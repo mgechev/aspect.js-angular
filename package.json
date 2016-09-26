@@ -6,7 +6,6 @@
   "jsnext:main": "./esm/index.js",
   "typings": "./index.d.ts",
   "scripts": {
-    "postinstall": "typings install",
     "tsc": "tsc --declaration && tsc --project tsconfig-es2015.json",
     "build_publish": "rm -rf dist && npm run tsc && cp ./package.json README.md dist",
     "test": "tsc && mocha ./dist/test/**/*.spec.js"
