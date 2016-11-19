@@ -1,6 +1,6 @@
 import {Injector} from '@angular/core';
 
-import {_AspectRegistry} from 'aspect.js';
+import {_AspectRegistry, _Targets} from 'aspect.js';
 
 export interface WoveMetadata {
   injector: Injector;
@@ -23,6 +23,7 @@ export const Wove = (config?: any) => {
       keys.forEach(key => {
         _AspectRegistry[key].wove(target, woveMetadata);
       });
+      _Targets.add({ config, target });
       target.__woven__ = true;
     };
     Reflect.getMetadataKeys(target)

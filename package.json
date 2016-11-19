@@ -1,30 +1,27 @@
 {
   "name": "aspect.js-angular",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Angular-specific aspect.js tools which provide access to the injector.",
   "main": "./index.js",
   "jsnext:main": "./esm/index.js",
   "typings": "./index.d.ts",
   "scripts": {
     "tsc": "tsc --declaration && tsc --project tsconfig-es2015.json",
-    "build_publish": "rm -rf dist && npm run tsc && cp ./package.json README.md dist",
-    "test": "tsc && mocha ./dist/test/**/*.spec.js"
+    "build_publish": "rm -rf dist && npm run tsc && cp ./package.json README.md dist"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mgechev/aspect.js-angular.git"
   },
   "peerDependencies": {
-    "aspect.js": "~0.2.4",
-    "@angular/core": ">=2.0.0-rc.1"
+    "aspect.js": "~0.3.2",
+    "@angular/core": ">=2.0.0"
   },
   "dependencies": {
     "reflect-metadata": "0.1.2"
   },
   "devDependencies": {
-    "chai": "^3.3.0",
-    "typescript": "^1.9.0-dev.20160409",
-    "typings": "^1.0.1"
+    "typescript": "^2.0.2"
   },
   "keywords": [
     "angular",
