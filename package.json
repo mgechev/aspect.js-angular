@@ -1,6 +1,6 @@
 {
   "name": "aspect.js-angular",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Angular-specific aspect.js tools which provide access to the injector.",
   "main": "./index.js",
   "jsnext:main": "./esm/index.js",

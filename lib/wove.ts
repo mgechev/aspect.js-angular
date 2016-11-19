@@ -20,10 +20,10 @@ export const Wove = (config?: any) => {
       if (target.__woven__) {
         return;
       }
+      _Targets.add({ config: woveMetadata, target });
       keys.forEach(key => {
         _AspectRegistry[key].wove(target, woveMetadata);
       });
-      _Targets.add({ config, target });
       target.__woven__ = true;
     };
     Reflect.getMetadataKeys(target)
