@@ -1,3 +1,7 @@
+# DEPRECATED
+
+The code generated change detection doesn't work with the reflection which this library implements.
+
 # Angular bindings for aspect.js
 
 This library provides bindings to the Angular `ElementInjector` when used together with [aspect.js](https://github.com/mgechev/aspect.js).
